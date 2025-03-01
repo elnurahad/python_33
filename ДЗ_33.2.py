@@ -17,6 +17,7 @@ class Shape(ABC):
     def area(self):
         pass
 
+
 class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
@@ -28,6 +29,7 @@ class Rectangle(Shape):
     def perimeter(self):
         return (self.width + self.height) * 2
 
+
 class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
@@ -38,6 +40,16 @@ class Circle(Shape):
     def perimeter(self):
         return 2 * 3.14 * self.radius
 
-shapes = [Rectangle(5, 10), Circle(3)]
+
+rectangle = Rectangle(5, 10)
+circle = Circle(3)
+
+shapes = [rectangle, circle]
 for shape in shapes:
-    print(f"Area {shape.area()}, perimeter {shape.perimeter()}")         
+    print(f"Area {shape.area()}, perimeter {shape.perimeter()}")
+
+
+print(f"Rectangle area: {rectangle.area()}")
+print(f"Rectangle perimeter: {rectangle.perimeter()}")
+print(f"Circle area: {circle.area()}")
+print(f"Circle perimeter: {circle.perimeter()}")
